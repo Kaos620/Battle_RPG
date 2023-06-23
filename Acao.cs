@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Projeto_Minimundo
@@ -49,6 +50,8 @@ namespace Projeto_Minimundo
 
                 jogador.EP--;
 
+                Thread.Sleep(3000);
+
                 Console.WriteLine($"\n\nO inimigo tomou um dano de {Dano}. O inimigo está com {inimigo.HP} de vida...\n");
             }
             else if (Dado < 13)
@@ -75,6 +78,8 @@ namespace Projeto_Minimundo
                 jogador.HP = (jogador.HP - Dano) + jogador.Defesa;
 
                 inimigo.EP--;
+
+                Thread.Sleep(3000);
 
                 Console.WriteLine($"\n\nO inimigo te acertou! Você tomou um dano de {Dano}.\nVocê está com {jogador.HP} de vida...\n\n");
             }
@@ -103,6 +108,7 @@ namespace Projeto_Minimundo
             Random random = new Random();
 
             Console.WriteLine("\n\n             Rolando Dado...\n");
+            Thread.Sleep(2000);
 
             int Dado = random.Next(1, 20) + jogador.Mobilidade;
 

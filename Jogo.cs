@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Projeto_Minimundo
@@ -19,6 +20,7 @@ namespace Projeto_Minimundo
             Turno:
             Console.WriteLine("\n-------------------------------------------------------\n");
             Console.WriteLine("Qual a sua proxima decisão? \n\n");
+            Thread.Sleep(1000);
             Console.WriteLine("-------------------------------------------------------\n\n\n");
             Console.WriteLine("[1] Atacar\n[2] Desistir\n[3] Ver Minha Ficha\n[4] Ver Meus Status\n\n");
 
@@ -75,18 +77,21 @@ namespace Projeto_Minimundo
                     if (Continuar == 1)
                     {
                         Console.WriteLine("\nÉ a vez do jogador...\n\n");
+                        Thread.Sleep(2500);
                         Decisao();
                         turnoJogador = false;
                         Turno();
                     }
                     else 
-                    { 
+                    {
+                      jogador.HP = 0;
                       GameOver(); 
                     }
                 }
                 else
                 {
                     Console.WriteLine("\nÉ a vez da máquina...\n\n");
+                    Thread.Sleep(2500);
                     acao.inimigoAtacar();
                     turnoJogador = true;
 
