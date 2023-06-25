@@ -22,7 +22,7 @@ namespace Projeto_Minimundo
             Console.WriteLine("Qual a sua proxima decisão? \n\n");
             Thread.Sleep(1000);
             Console.WriteLine("-------------------------------------------------------\n\n\n");
-            Console.WriteLine("[1] Atacar\n[2] Desistir\n[3] Ver Minha Ficha\n[4] Ver Meus Status\n\n");
+            Console.WriteLine("[1] Atacar\n[2] Desistir\n[3] Ver Minha Ficha\n[4] Ver Meus Status\n[5] Tutorial\n\n");
 
             int decisao = Convert.ToInt32(Console.ReadLine());
 
@@ -46,6 +46,14 @@ namespace Projeto_Minimundo
                 Status();
                 Console.WriteLine("\n\n=============================================\n\n");
                 Console.WriteLine("Selecione outra ação: \n");
+                Decisao();
+            }
+            else if (decisao == 5)
+            {
+                Tutorial();
+                Console.WriteLine("\n\n=============================================\n\n");
+                Console.WriteLine("Selecione outra ação: \n");
+                Thread.Sleep(5000);
                 Decisao();
             }
             else 
@@ -149,7 +157,9 @@ namespace Projeto_Minimundo
 
         public void Tutorial()
         {
-
+            Console.WriteLine("O objetivo do jogo é simples.\nVocê tem um inimigo. Arnaldo\nVocê será capaz de ataca-lo, e ele será capaz do mesmo. Vence quem derrotar o outro primeiro.\nO sistema de combate é simples, você vai rolar um dado de 20 lados, se o dado der um valor maior que 13, você acerta o golpe." +
+                "O inimigo terá que fazer o mesmo. É um jogo de sorte, mas tem como mas não totalmente.\nVocê terá 3 racas e 3 classes, cada raca tem atributos de FORÇA, DEFESA E MOBILIDADE diferentes.\nCada class terá uma arma diferente com um dano diferente. Te dando no total 9 possibilidades de jogo." +
+                "A questão é, quanto maior seu Ataque, maior seu dano. Quanto maior sua defesa, menos dano você recebe, e quanto maior sua mobilidade, maior a chance de você acertar o golpe.\n\nÉ isso, boa sorte\n\n");
         }
 
 

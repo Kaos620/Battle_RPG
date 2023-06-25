@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Projeto_Minimundo
@@ -21,6 +22,9 @@ namespace Projeto_Minimundo
                 "               Bem Vindo a BATALHA CONTRA ARNALDO!               \n" +
                 "               -------------------------------               \n\n" +
                 "               Vamos criar seu personagem!              \n\n");
+
+            jogo.Tutorial();
+            Thread.Sleep(8000);
 
             jogador.CriarPersonagem();
 

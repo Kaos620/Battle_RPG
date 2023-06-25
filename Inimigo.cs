@@ -46,7 +46,7 @@ namespace Projeto_Minimundo
 
             Ataque = 23;
             Defesa = 12;
-            Mobilidade = 6;
+            Mobilidade = 4;
         }
     }
 }
